@@ -1,0 +1,18 @@
+{
+    "require": {
+		"silex/silex": "~1.1",
+		"monolog/monolog": "~1.7",
+		"twig/twig": "~1.0",
+		"symfony/security": "~2.3", 
+		"symfony/locale": "~2.0",
+		"doctrine/dbal": "~2.4", 
+		"symfony/yaml":"v2.2.0",
+		"symfony/config":"v2.2.0",
+		"symfony/twig-bridge": "~2.3"
+    },
+	"autoload": {
+        "psr-0": {
+            "LMH": "src/classes/"
+         }
+    }
+}
