@@ -1,0 +1,9 @@
+<div class="sidebar-items">
+
+<h5 class="title">{{ title }}</h5>
+
+{% for item in items %}
+	{% include item_layout with item %}
+{% endfor %}
+
+</div>

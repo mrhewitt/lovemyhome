@@ -1,0 +1,21 @@
+
+home:
+  path: /
+  defaults: { _controller: 'Shop\Controllers\IndexController::indexAction' }
+
+shop:
+  path: /shop/{cat1}/{cat2}/{product}
+  defaults: { _controller: 'Shop\Controllers\IndexController::shopAction', cat1:'',cat2:'',product:'' }
+      
+admin:
+  path: /admin
+  defaults: { _controller: 'Shop\Controllers\AdminController::indexAction' }
+ 
+items:
+  path: /{url}
+  defaults: { _controller: 'Shop\Controllers\IndexController::pageAction' }
+ 
+contact:
+  path: /contact
+  defaults: { _controller: 'Shop\Controllers\IndexController::contactAction' }
+ 

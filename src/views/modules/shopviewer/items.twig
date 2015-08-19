@@ -1,0 +1,42 @@
+<!-- Breadcrumb -->
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  {% if ( cat2 == '' ) %}<li><a href="/shop/{{cat1|urlify}}">{{cat1}}</a></li>{% else %}<li class="active">{{cat1}}</li>{% endif %}
+  {% if ( cat2 != '' ) %}<li class="active">{{cat2}}</li>{% endif %}
+</ul>
+
+<!-- Title -->
+<h4 class="pull-left">{{category.long_name}}</h4>
+
+  <!-- Sorting -->
+	<div class="form-group pull-right">                               
+		<select class="form-control">
+		<option>Sort By</option>
+		<option>Name (A-Z)</option>
+		<option>Name (Z-A></option>
+		<option>Price (Low-High)</option>
+		<option>Price (High-Low)</option>
+		<option>Ratings</option>
+		</select>  
+	</div>
+
+  <div class="clearfix"></div>
+
+<div class="row">
+	{% for item in items %}
+		<div class="col-md-4 col-sm-6">
+		{% include item_layout with item %}
+		</div>				
+	{% endfor %}
+</div>
+
+<div class="col-md-9 col-sm-9">
+	<!-- Pagination -->
+	<div class="paging">
+	   <span class='current'>1</span>
+	   <a href='#'>2</a>
+	   <span class="dots">&hellip;</span>
+	   <a href='#'>6</a>
+	   <a href="#">Next</a>
+	</div>
+</div>           

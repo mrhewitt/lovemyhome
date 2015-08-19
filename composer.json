@@ -12,7 +12,8 @@
     },
 	"autoload": {
         "psr-0": {
-            "LMH": "src/classes/"
+            "LMH": "src/classes/",
+			"Shop": "src/classes/"
          }
     }
 }

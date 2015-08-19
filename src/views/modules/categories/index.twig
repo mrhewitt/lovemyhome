@@ -1,0 +1,24 @@
+<h5 class="title">{{ title }}</h5>
+<!-- Sidebar navigation -->
+  <nav>
+	<ul id="nav">
+	  <!-- Main menu. Use the class "has_sub" to "li" tag if it has submenu. -->
+	  {% if page is defined %}
+	  {% for page in pages %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	  {% endfor %}
+	  {% endif %}
+	  {% if categories is defined %}
+	  {% for parent in categories %}
+	  <li class="has_sub"><a href="#">{{ parent.category_name }}</a>
+		<!-- Submenu -->
+		<ul>	
+			{% for category in parent.categories %}
+			<li><a href="/shop/{{parent.category_name}}/{{category.category_name}}">{{ category.category_name }}</a></li>
+			{% endfor %}		 
+		</ul>
+	  </li>
+	  {% endfor %}
+	  {% endif %}
+	</ul>
+  </nav>

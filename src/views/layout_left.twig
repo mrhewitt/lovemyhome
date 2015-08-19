@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	{% include 'head.twig' %}	
+	
+	<body>
+		
+		{% include 'modals.twig' %}
+
+		{% include 'modules/header.twig' %}
+
+		{{ navigation|raw }}
+
+		<div class="items">
+		  <div class="container">
+			<div class="row">
+
+			<!-- modules (only a list of horizontally stacked modules -->
+			{% if modules.top is defined %}
+			{% for module in modules.top %}
+			{{ module.content|raw }}
+			{% endfor %}		
+			{% endif %}
+
+			<div class="col-md-3 col-sm-3 hidden-xs">
+				<!-- modules (only a list of horizontally stacked modules -->
+				{% if modules.left is defined %}
+				{% for module in modules.left %}
+				{{ module.content|raw }}
+				{% endfor %}
+				{% endif %}
+			</div>
+
+			<div class="col-md-9 col-sm-9">
+		
+				<!-- modules (only a list of horizontally stacked modules -->
+				{% if modules.content is defined %}
+				{% for module in modules.content %}
+				{{ module.content|raw }}
+				{% endfor %}
+				{% endif %}
+			
+			</div>
+			
+			</div>
+		  </div>	
+		</div>	
+		
+		<!-- modules (only a list of horizontally stacked modules -->
+		{% if modules.bottom is defined %}
+		{% for module in modules.bottom %}
+		{{ module.content|raw }}
+		{% endfor %}
+		{% endif %}
+		
+		<footer>
+		{% if modules.footer is defined %}
+		{% for module in modules.footer %}
+		{{ module.content|raw }}
+		{% endfor %}
+		{% endif %}
+		</footer>
+		
+		{% include 'foot.twig' %}
+		
+	</body>	
+</html>

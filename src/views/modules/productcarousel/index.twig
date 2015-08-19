@@ -1,0 +1,27 @@
+<!-- Owl Carousel Starts -->
+<div class="container">
+
+	<div class="rp">
+		<!-- Recent News Starts -->
+		<h4 class="title">{{ title }}</h4>
+		<div class="recent-news block">
+				<!-- Recent Item -->
+				<div class="recent-item">
+					<div class="custom-nav">
+						<a class="prev"><i class="fa fa-chevron-left br-lblue"></i></a>
+						<a class="next"><i class="fa fa-chevron-right br-lblue"></i></a>
+					</div>
+					<div id="owl-recent" class="owl-carousel">
+						<!-- Item -->
+						{% for item in items %}
+							{% include item_layout with item %}
+						{% endfor %}
+					</div>
+				</div>
+		</div>
+		
+		<!-- Recent News Ends -->
+	</div>
+	
+</div>
+<!-- Owl Carousel Ends -->
