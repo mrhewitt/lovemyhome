@@ -1,7 +1,7 @@
 <!-- Breadcrumb -->
 <ul class="breadcrumb">
   <li><a href="/">Home</a></li>
-  {% if ( cat2 == '' ) %}<li><a href="/shop/{{cat1|urlify}}">{{cat1}}</a></li>{% else %}<li class="active">{{cat1}}</li>{% endif %}
+  {% if ( cat2 != '' ) %}<li><a href="/shop/{{cat1|urlify}}">{{cat1}}</a></li>{% else %}<li class="active">{{cat1}}</li>{% endif %}
   {% if ( cat2 != '' ) %}<li class="active">{{cat2}}</li>{% endif %}
 </ul>
 

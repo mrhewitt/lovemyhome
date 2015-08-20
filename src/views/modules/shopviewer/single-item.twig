@@ -1,0 +1,92 @@
+<!-- Breadcrumb -->
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><a href="/shop/{{cat1|urlify}}">{{cat1}}</a></li>
+  <li><a href="/shop/{{cat1|urlify}}/{{cat2|urlify}}">{{cat2}}</li>
+</ul>
+
+
+<!-- Product details -->
+
+<div class="product-main">
+  <div class="row">
+	<div class="col-md-6 col-sm-6">
+
+	  <!-- Image. Flex slider -->
+		<div class="product-slider">
+		  <div class="product-image-slider flexslider">
+			<ul class="slides">
+				<!-- Each slide should be enclosed inside li tag. -->
+				
+				<!-- Slide #1 -->
+			  <li>
+				<!-- Image -->
+				<img src="/img/photos/4.png" alt=""/>
+			  </li>
+			     
+			  
+			</ul>
+		  </div>
+	  </div>
+
+	</div>
+	<div class="col-md-6 col-sm-6">
+	  <!-- Title -->
+		<h4 class="title">{{product.product_name}}</h4>
+		<h5>Price : {{product.price|currency}}</h5>
+		<p>Availability : In Stock</p>
+			  <!-- Dropdown menu -->
+				<div class="form-group">                               
+					<select class="form-control">
+					<option>Color</option>
+					<option>Black</option>
+					<option>White</option>
+					<option>Grey</option>
+					</select>  
+				</div>
+
+				<!-- Quantity and add to cart button -->
+				
+	<div class="row">
+		<div class="col-md-6">
+			<div class="input-group">
+			  <input type="text" class="form-control input-sm" value="2">
+			  <span class="input-group-btn">
+				<button class="btn btn-default btn-sm" type="button">Add to Cart</button>
+			  </span>								  
+			</div>
+		</div>
+	</div>
+
+	<!-- Add to wish list -->
+	<a href="wish-list.html">+ Add to Wish List</a>
+
+	</div>
+  </div>
+</div>
+
+<br />
+
+<!-- Description, specs and review -->
+
+<ul class="nav nav-tabs">
+  <!-- Use uniqe name for "href" in below anchor tags -->
+  <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
+</ul>
+
+<!-- Tab Content -->
+<div class="tab-content">
+  <!-- Description -->
+  <div class="tab-pane active" id="tab1">
+	<h5>{{product.product_name}}</h5>
+	<p>Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet. Quisque eu consectetur erat. Proin rutrum, erat eget posuere semper, <em>arcu mauris posuere tortor</em>, in commodo enim magna id massa. Suspendisse potenti. Aliquam erat volutpat. Maecenas quis tristique turpis. Nulla facilisi. Duis sed velit at <a href="#">magna sollicitudin cursus</a> ac ultrices magna. Aliquam consequat, purus vitae auctor ullamcorper, sem velit convallis quam, a pharetra justo nunc et mauris. Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	<h6>Features</h6>
+	<ul>
+	<li>Etiam adipiscing posuere justo, nec iaculis justo dictum non</li>
+	<li>Cras tincidunt mi non arcu hendrerit eleifend</li>
+	<li>Aenean ullamcorper justo tincidunt justo aliquet et lobortis diam faucibus</li>
+	<li>Maecenas hendrerit neque id ante dictum mattis</li>
+	<li>Vivamus non neque lacus, et cursus tortor</li>
+	</ul>
+  </div>
+</div>

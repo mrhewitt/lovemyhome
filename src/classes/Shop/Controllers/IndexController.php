@@ -14,7 +14,7 @@ class IndexController
 {
     public function indexAction(Application $app)
     {
-		$page = new Shop\PageController($app);
+		$page = new Shop\Controllers\PageController($app);
         return $page->render('/');
     }
 
@@ -26,7 +26,7 @@ class IndexController
 		});
 		$app['twig']->addFilter($filter);
 
-		$filter = new \Twig_SimpleFilter('curreny', function ($value) {
+		$filter = new \Twig_SimpleFilter('currency', function ($value) {
 			return 'R'.number_format($value,2);
 		});
 		$app['twig']->addFilter($filter);
