@@ -1,0 +1,10 @@
+{
+    "name": "LoveMyHomeShop",
+    "version": "0.1.0",
+    "dependencies": {
+          "jquery": "~1.11.3",
+          "bootstrap": "~3.3.5",
+		  "remarkable-bootstrap-notify": "~3.1.3",
+		  "jQuery-Storage-API": "~1.7.4"
+    }
+}
